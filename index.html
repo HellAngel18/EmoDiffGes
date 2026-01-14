@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Video Analysis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Emotion-Aware Co-Speech Holistic Gesture Generation with Progressive Synergistic Diffusion</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2501.18898"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/HellAngel18/EmoDiffGes"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./static/images/emodiffges-teaser.jpg"/>
+      <p>
+        <b>EmoDiffGes</b>we design a unified framework comprising several synergistic components that embody psychological insights and operationalize them into coordinated co-speech gesture generation.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing co-speech gesture generation methods face two fundamental limitations: (1) producing inexpressive gestures due to ignoring the temporal evolution of emotion; (2) generating incoherent and unnatural motions as a result of either holistic body oversimplification or independent part modeling. To address the above limitations, we propose EmoDiffGes, a diffusion-based framework grounded in embodied emotion theory, unifying dynamic emotion conditioning and part-aware synergistic modeling. Specifically, a Dynamic Emotion-Alignment Module (DEAM) is first applied to extract dynamic emotional cues and inject emotion guidance into the generation process. Then, a Progressive Synergistic Gesture Generator (PSGG) iteratively refines region-specific latent codes while maintaining full-body coordination, leveraging a Body Region Prior for part-specific encoding and Progressive Inter-Region Synergistic Flow for global motion coherence. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Method</h2>
+    <div class="content has-text-centered">
+        <img src="./static/images/emodiffges-pipeline.jpg"/>
+      <p>(1) Top: Dynamic Emotion-Alignment Module (sec.3.3) extracts emotional features from text transcripts using EmoRoBERTa, while audio features (amplitude, onset) are encoded and fused with text embeddings via average pooling for conditional input. Bottom: The motion generation process encodes body regions using Prior Encoders (sec.3.2), processes them through masked Face, Upper, Hands, and Lower Streams, and fuses features via the Progressive Synergistic Gesture Generator (sec.3.4). A Denoiser refines noisy motion at diffusion step t, with Quantizer and Decoders reconstructing motions guided by Body Priors.
+  </div>
+</section>
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Comparison on BEAT2</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/output-1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/output-2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        
+      <!-- </div> -->
+      <h2 class="content has-text-centered">
+        EmoDiffGes 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Additional Results</h2>
+
+        <div class="content">
+          <div class="columns is-centered">
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex1.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex4.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+          </div>
+
+          <div class="columns is-centered">
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex5.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- Middle Video -->
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+
+          <div class="columns is-centered">
+            <!-- Left Video -->
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex7.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <!-- Middle Video -->
+            <div class="column is-half has-text-centered">
+              <video poster="" autoplay controls muted loop height="100%">
+                <source src="./static/videos/ex8.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+
+
+        </div>
+        <h2 class="content has-text-centered">
+          EmoDiffGes
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code></code>@article{li2025EmoDiffGes,
+author = {Li, Xinru and Lin, Jingzhong and Zhang, Bohao and Qi, Yuanyuan and Wang, Changbo and He, Gaoqi},
+title = {EmoDiffGes: Emotion-Aware Co-Speech Holistic Gesture Generation with Progressive Synergistic Diffusion},
+journal = {Computer Graphics Forum},
+volume = {44},
+number = {7},
+pages = {e70261},
+doi = {https://doi.org/10.1111/cgf.70261},
+year = {2025}
+}
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer" style="padding-top: 6px; padding-bottom: 6px;">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Our website template is a modified version of <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks to the authors' contribution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>

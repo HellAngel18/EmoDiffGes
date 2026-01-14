@@ -1,0 +1,28 @@
+exoname: exps
+folder: /sata/public/lixr/EmoDiffGes/classerfier
+cuda: cuda
+
+baatch_size: 20
+num_epochs: 1000
+lr: 0.0001
+snapshot: 100
+
+dataset: BEAT
+datapath: /sata/public/lixr/EmoDiffGes/datasets/beat_cache/beat_smplx_en_emage_128
+num_frmes: 60
+sampling: conseq
+sampling_step: 1
+pose_rep: rot6d
+
+max_len: -1
+min_len: -1
+num_seq_max: -1
+
+glob: True
+
+
+
+
+
+
+

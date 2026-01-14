@@ -1,0 +1,72 @@
+model:
+  model_name: GestureDiffuse
+  g_name: GestureDiffusion
+  do_classifier_free_guidance: False
+  guidance_scale: 1.5
+
+  denoiser:
+    target: models.denoiser.GestureDenoiser
+    params:
+      input_dim: 128
+      latent_dim: 256
+      ff_size: 1024
+      num_layers: 8
+      num_heads: 4
+      dropout: 0.1
+      activation: "gelu"
+      n_seed: 8
+      flip_sin_to_cos: True
+      freq_shift: 0.0
+      use_exp: true
+
+
+  modality_encoder:
+    target: models.modality_encoder.ModalityEncoder
+    params:
+      data_path: ./datasets/BEAT_SMPL/beat_v2.0.0/beat_english_v2.0.0/
+      t_fix_pre: False
+      audio_dim: 256
+      audio_in: 2
+      raw_audio: False
+      latent_dim: 256
+      audio_fps: 30
+      use_exp: true
+
+
+  scheduler:
+    target: diffusers.DDIMScheduler
+    num_inference_steps: 20
+    eta: 0.0
+    params:
+      num_train_timesteps: 1000
+      # if using 'linear or 'scaled_linear', beta_start and beta_end matters, if cosine, beta_start and beta_end are ignored
+      beta_start: 0.00085
+      beta_end: 0.012
+      # 'linear' or 'squaredcos_cap_v2' or 'scaled_linear'
+      beta_schedule: 'squaredcos_cap_v2'
+      prediction_type: 'sample'
+      clip_sample: false
+      # 'leading' or 'trailing' or 'linspace'
+      timestep_spacing: 'leading'
+      # below are for ddim
+      set_alpha_to_one: True
+      steps_offset: 0
+
+
+  # use ddpm scheduler
+  # scheduler:
+  #   target: diffusers.DDPMScheduler
+  #   num_inference_steps: 50
+  #   eta: 0.0
+  #   params:
+  #     num_train_timesteps: 1000
+  #     beta_start: 0.00085
+  #     beta_end: 0.012
+  #     beta_schedule: 'squaredcos_cap_v2' # 'squaredcos_cap_v2'
+  #     prediction_type: 'sample'
+  #     clip_sample: false
+  #     variance_type: 'fixed_small_log'
+  #     # below are for ddim
+  #     # set_alpha_to_one: True
+  #     # steps_offset: 1
+  
