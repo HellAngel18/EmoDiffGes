@@ -1,7 +1,7 @@
 <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/cgf.70261"><img src="https://onlinelibrary.wiley.com/pb-assets/journal-banners/14678659-1501384695253.jpg"></a>
 # EmoDiffGes: Emotion-Aware Co-Speech Holistic Gesture Generation with Progressive Synergistic Diffusion.
 <p align="center">
-  <img src="./teaser.png" width="100%" alt="Teaser Image">
+  <img src="./picture/teaser.png" width="100%" alt="Teaser Image">
 </p>
 
 
