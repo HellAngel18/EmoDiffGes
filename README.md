@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ## Download Model
 ```
 # Download ckpt
-
+https://drive.google.com/drive/folders/1cjuC6DaC7UJVklAwvCW3ba6Ueg8KttPw?dmr=1&ec=wgc-drive-hero-goto
 
 # Download the EmoRoBERTa model
 hf download arpanghoshal/EmoRoBERTa
